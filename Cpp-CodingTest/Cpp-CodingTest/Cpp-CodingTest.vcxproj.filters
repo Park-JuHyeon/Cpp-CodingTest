@@ -16,10 +16,13 @@
     <Filter Include="소스 파일\0726Day01">
       <UniqueIdentifier>{ba277028-cf6e-478b-a171-0ff9d0dc23f0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\0727Day02">
+      <UniqueIdentifier>{e4356b26-dc0e-449d-b7a0-f2bf1d50ad29}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="factorial.cpp">
-      <Filter>소스 파일\0726Day01</Filter>
+    <ClCompile Include="permutation.cpp">
+      <Filter>소스 파일\0727Day02</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
