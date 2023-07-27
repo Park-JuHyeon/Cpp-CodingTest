@@ -26,5 +26,7 @@
 		- code로의 구현 : C++ -> next_permutation이라는 함수사용 : 오름차순으로 순열을 생성
 		
 	2. 재귀함수로 만드는 순열
-		
+		- vector<int> v를 선언
+		- printV라는 v[i]값 출력하는 함수 생성
+		- makePermutation함수를 통해 재귀함수 실행
 		
