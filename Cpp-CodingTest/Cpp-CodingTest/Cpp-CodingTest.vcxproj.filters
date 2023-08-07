@@ -22,10 +22,16 @@
     <Filter Include="소스 파일\0804">
       <UniqueIdentifier>{58660361-b1a8-4299-aaa4-507737dad831}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\0807">
+      <UniqueIdentifier>{7eac3230-9e8f-4280-8411-a56d2035a020}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="memory&amp;pointer.cpp">
-      <Filter>소스 파일\0804</Filter>
+    <ClCompile Include="7small.cpp">
+      <Filter>소스 파일\0807</Filter>
+    </ClCompile>
+    <ClCompile Include="countingstar.cpp">
+      <Filter>소스 파일\0807</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
