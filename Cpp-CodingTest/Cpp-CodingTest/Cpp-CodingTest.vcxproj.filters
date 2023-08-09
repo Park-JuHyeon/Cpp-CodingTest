@@ -27,9 +27,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="7small.cpp">
-      <Filter>소스 파일\0807</Filter>
-    </ClCompile>
     <ClCompile Include="countingstar.cpp">
       <Filter>소스 파일\0807</Filter>
     </ClCompile>
