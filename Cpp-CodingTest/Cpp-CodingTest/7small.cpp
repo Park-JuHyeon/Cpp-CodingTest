@@ -1,40 +1,56 @@
 // 백준 2309번 일곱난쟁이
+// 난쟁이 키의 합 100 = 전체키의 합 - 난쟁이가 아닌 a,b
 
 #include <bits/stdc++.h>
 using namespace std;
+int a[9], sum;
+vector<int> v;		// 결과로 출력할 일곱 난쟁이의 키를 저장할 벡터
+pair<int, int> ret;		// 합이 100이 되는 두 난쟁이의 인덱스를 저장할 페어
 
-int main() {
-	vector<int> heights(9);		//  아홉 난쟁이의 키를 저장할 배열
-	int sum = 0;		// 난쟁이의 키 합계
-
-	cout << "난쟁이 키 입력" << endl;
-	// 아홉 난쟁이 키 입력받기
+void solve() {
 	for (int i = 0; i < 9; i++) {
-		cin >> heights[i];
-		sum += heights[i];
-	}
-
-	cout << "찾은 난쟁이 키" << endl;
-	// 가능한 모든 조합을 검사하여 합이 100이되는 조합 찾기
-	for (int i = 0; i < 8; i++) {		// 첫 번째 난쟁이부터 시작해 마지막 난쟁이까지 하나씩 순회 0~7까지
-		for (int j = i + 1; j < 9; j++) {		// height[i]의 다음 난쟁이부터 시작해 마지막 난쟁이까지 i+1 ~ 8까지
-			if (sum - heights[i] - heights[j] == 100) {
-				// 유효한 조합을 찾았을때, 해당 난쟁이를 제외하고 다른 난쟁이의 키를 정렬하여 출력
-				vector<int> result;
-				for (int k = 0; k < 9; ++k) {
-					if (k != i && k != j) {
-						result.push_back(heights[k]);
-					}
-				}
-				sort(result.begin(), result.end());		// 오름차순 정렬
-				for (int k : result) {
-					cout << k << endl;
-				}
-				return 0;
+		for (int j = 0; j < i; j++) {
+			if (sum - a[i] - a[j] == 100) {
+				ret = { i,j };
+				return;
 			}
 		}
 	}
-	return 0;
+}
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
+	for (int i = 0; i < 9; i++) {
+		cin >> a[i]; sum += a[i];
+	}
+	solve();
+
+	for (int i = 0; i < 9; i++) {
+		if (ret.first == i || ret.second == i) continue;
+		v.push_back(a[i]);
+	}
+	sort(v.begin(), v.end());
+	for (int i : v) cout << i << " ";
+
+	//do {
+	//	for (int i : a) {
+	//		cout << i << " ";	// 모든 난쟁이들의 키를 출력
+	//	}
+	//	cout << '\n';
+	//	int sum = 0;
+	//	for (int i = 0; i < 7; i++) {
+	//		sum += a[i];
+	//	}
+	//	if (sum == 100) break;
+	//} while (next_permutation(a, a + 9));	// 다음 순열 생성하면서 종료
+
+	//for (int i = 0; i < 7; i++) {
+	//	cout << a[i] << endl;
+	//	return 0;
+	//}
+
 }
 
 // 2. 재귀함수 do while 문으로 풀기
