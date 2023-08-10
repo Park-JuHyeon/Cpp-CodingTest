@@ -25,10 +25,13 @@
     <Filter Include="소스 파일\0807">
       <UniqueIdentifier>{7eac3230-9e8f-4280-8411-a56d2035a020}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\0809">
+      <UniqueIdentifier>{601a7783-31a3-4bbd-8bc3-2d3026b77c39}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="countingstar.cpp">
-      <Filter>소스 파일\0807</Filter>
+    <ClCompile Include="firstname.cpp">
+      <Filter>소스 파일\0809</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
