@@ -39,8 +39,8 @@ using namespace std;
 //}
 
 // 3. 농구선수 첫글자
-int n, cnt[26];
-string name, ret;
+int n, cnt[26];		// n은 선수의 수, cnt는 알파벳 a~z
+string name, ret;	// name 은 선수의 성,  ret는 5번이상 나온 성의 첫글자
 int main() {
 	cin >> n;
 	for (int i = 0; i < n; i++) {

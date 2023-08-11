@@ -28,10 +28,16 @@
     <Filter Include="소스 파일\0809">
       <UniqueIdentifier>{601a7783-31a3-4bbd-8bc3-2d3026b77c39}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\0811">
+      <UniqueIdentifier>{b4b5c65d-4ea3-46a3-aea7-34118982c632}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="again.cpp">
-      <Filter>소스 파일\0809</Filter>
+    <ClCompile Include="rot13.cpp">
+      <Filter>소스 파일\0811</Filter>
+    </ClCompile>
+    <ClCompile Include="file_pattern.cpp">
+      <Filter>소스 파일\0811</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
